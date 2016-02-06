@@ -1,0 +1,44 @@
+
+<div ng-init="init()">
+	<div id="grupo1" class="panel-primary">
+				<h2 class="panel-heading">Productos</h2>
+		<div id="producto1">
+					<table>	
+						<tr>
+							<th>Nombre</th>
+							<th>Precio</th>
+							<th>Cantidad</th>
+							<th>Total</th>
+						</tr>
+						<tr>
+							<td><label>{{producto1.nombre}}</label></td>
+							<td><label name="precio1" ng-model="producto1.precio">${{producto1.precio}}</label></td>
+							<td><input name="cantidad1" ng-model="producto1.cantidad" type="number" min='0'/></td>
+							<td><label>${{producto1.precio*producto1.cantidad}}</label></td>
+					</tr>
+					</table>
+				</div>
+
+		<div id="producto2">
+			<table>
+					<tr>
+						<td><label>{{producto2.nombre2}}</label></td>
+						<td><label>${{producto2.precio2}}</label></td>
+						<td><input name="cantidad2" ng-model="producto2.cantidad2" type="number" min='0'/></td>
+						<td><label>${{producto2.precio2*producto2.cantidad2}}</label></td>
+					</tr>
+			</table>	
+
+				<label>SubTotal:${{total}}</label><br/>
+				<label>Descuento:${{descuento}}</label><br/>
+				<label>Total a Pagar:${{total-descuento}}</label><br/>
+
+				<button  class="btn-primary" type="button" ng-click="calcular()">Calcular total</button> 
+				<button class="btn-primary" type="button" ng-click="limpiar()">limpiar</button>
+				<button class="btn-primary" type="button" ng-click="volver()">Atrás</button>
+
+		</div>	
+
+	</div>
+</div>			
+		

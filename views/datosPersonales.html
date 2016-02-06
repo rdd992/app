@@ -1,0 +1,28 @@
+<div>
+<form name="datos" class="panel-primary">
+	<h1 class="panel-heading" >Datos Personales</h1> 
+		<label>Nombre:(*)</label>
+
+		<input type="text" name="nombre" ng-model="usuario.nombre" ng-minlength="3"/><br/>
+			
+		<label>Apellido:(*)</label>
+
+		<input type="text" ng-model="usuario.apellido"/>
+		<br/>
+
+		<label>Edad:(*)</label>
+
+		<input type="number" ng-model="usuario.edad"/>
+		<br/>
+
+		<label>sexo:(*)</label>
+
+		<select name="combo" ng-model="usuario.sexo" ng-options="opcion.nombre for opcion in sexo.opciones">
+
+		<option value=''>Seleccionar</option>
+		</select><br/>
+
+		<button class="btn-primary" type="button" ng-click="validar()">Mostrar Productos 
+			</button>
+	</form>
+</div>
